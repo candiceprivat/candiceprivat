@@ -38,7 +38,7 @@ function setup() {
 
  // humanButton = createButton('human');
   //humanButton.mousePressed(function() {
-    classifier.addImage('human');
+  //  classifier.addImage('human');
  // });
 
   //buildingButton = createButton('building');
@@ -55,7 +55,7 @@ function setup() {
  // saveButton.mousePressed(function() {
   //  classifier.save();
 //  });
-}
+//}
 
 function draw() {
   background(0);
