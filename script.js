@@ -18,48 +18,48 @@ function modelReady() {
   classifier.load('./model.json', customModelReady);
 }
 
- function customModelReady() {
-   console.log('Custom Model is ready!!!');
-   label = 'model ready';
-   classifier.classify(gotResults);
- }
+function customModelReady() {
+  console.log('Custom Model is ready!!!');
+  label = 'model ready';
+  classifier.classify(gotResults);
+}
 
 function videoReady() {
   console.log('Video is ready!!!');
 }
 
 function setup() {
-  createCanvas(400, 300);
+  createCanvas(320, 270);
   video = createCapture(VIDEO);
   video.hide();
   background(0);
   mobilenet = ml5.featureExtractor('MobileNet', modelReady);
   classifier = mobilenet.classification(video, videoReady);
 
- // humanButton = createButton('human');
-  //humanButton.mousePressed(function() {
-  //  classifier.addImage('human');
- // });
+//   humanButton = createButton('human');
+//   humanButton.mousePressed(function() {
+//     classifier.addImage('human');
+//   });
 
-  //buildingButton = createButton('building');
-  //buildingButton.mousePressed(function() {
-   // classifier.addImage('building');
- // });
+//   buildingButton = createButton('building');
+//   buildingButton.mousePressed(function() {
+//     classifier.addImage('building');
+//   });
 
- // trainButton = createButton('train');
- // trainButton.mousePressed(function() {
-   // classifier.train(whileTraining);
-  //});
+//   trainButton = createButton('train');
+//   trainButton.mousePressed(function() {
+//     classifier.train(whileTraining);
+//   });
 
- // saveButton = createButton('save');
- // saveButton.mousePressed(function() {
-  //  classifier.save();
-//  });
-//}
+//   saveButton = createButton('save');
+//   saveButton.mousePressed(function() {
+//     classifier.save();
+//   });
+}
 
 function draw() {
   background(0);
-  image(video, 0, 0, 400, 300);
+  image(video, 0, 0, 320, 240);
   fill(255);
   textSize(16);
   text(label, 10, height - 10);
