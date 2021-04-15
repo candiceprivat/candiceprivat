@@ -1,0 +1,15 @@
+html, body {
+  margin: 0;
+  padding: 0;
+   text-align:center;
+}
+
+
+canvas {
+  display: block;
+  margin:auto;
+}
+
+.Reglages{
+   float: right;
+  }
